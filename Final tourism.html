@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="js.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+
+        .head{
+            text-align: center;
+            font-family: Comic Sans MS;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .logo{
+            height: 40px;
+            border-radius: 30px;
+        }
+        #sectionhome{
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+        }
+        .card1{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .card1_img{
+            width: 20vw;
+            height: 30vh;
+            margin: 20px;
+            margin-right: 15px;
+        }
+        .para_card{
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            height: 10vh;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        .para_card1{
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            height: 17vh;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        .para{
+            font-family: Brush Script MT;
+        }
+        .para1{
+            font-family: italic;
+        }
+        .checked {
+  color: orange;
+}
+        .detailed_cardimg{
+            width: 50vw;
+            margin: 20px;
+        }
+        .lastcard{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .detailed_card{
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .detailed_para_card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 15px;
+            background-color: white;
+        }
+        .js_head{
+            text-align: center;
+            font-family: Comic Sans MS;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .js_card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            padding: 10px;
+        }
+        .sourse-input{
+            width: 25vw;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg"
+            class="navbar-image logo"
+            alt=""
+          />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" onclick="display('sectionHome')" href="#">
+              Home <span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-link" href="#">About Me</a>
+            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#">Testimonials</a>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row">
+            <div id="sectionHome">
+                <div class="col-12">
+                    <h1 class="head">Select Your Country</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://img.freepik.com/free-vector/india-background_1284-22033.jpg?w=2000" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionindia')"><h1 class="para">INDIA</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://cdn.cnn.com/cnnnext/dam/assets/170606121226-japan---travel-destination---shutterstock-230107657.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionjapan')"><h1 class="para">JAPAN</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://www.state.gov/wp-content/uploads/2022/02/shutterstock_1025960785-2560x1300.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionaustralia')"><h1 class="para">AUSTRALIA</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionitaly')"><h1 class="para">ITALY</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production125/d653/a01517ea-0ec0-4639-b862-33922c62f04a.jpg?impolicy=fcrop&w=800&h=533&q=medium" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionsouthkorea')"><h1 class="para">SOUTH KOREA</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://www.awf.org/sites/default/files/styles/webp_image/public/2021-06/AfricanGiraffe_WildlifeConservation_AWF.jpg.webp?itok=DcPKOVSr" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionafrica')"><h1 class="para">AFRICA</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://images.adsttc.com/media/images/60b6/09d7/f91c/8199/fb00/00cd/newsletter/shutterstock_1196821240.jpg?1622542766" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiondubai')"><h1 class="para">DUBAI</h1></div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://media.cntraveler.com/photos/605969be1b01d7e74b70528f/4:5/w_2740,h_3425,c_limit/Greenland-2021-B47XDE%20(1).jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiongreenland')"><h1 class="para">GREENLAND</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/0b0380328634337d807c971ee73c92fadbc51cdd/big-9a58778640ae1199f127401b5400e01a.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionnorway')"><h1 class="para">NORWAY</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-12 d-flex flex-row lastcard">
+                <div class="col-md-4">
+                    <div class="content-box">
+                        <span class="content-box__headline">Important links</span>
+                                                        <ul class="nav-footer-links nav-footer-links--inline">
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/terms-and-conditions">
+                        Terms &amp; Conditions
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/privacy-policy">
+                        Privacy Policy
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                       href="#" onclick="CCM.openWidget();return false;">
+                        Cookies
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/legal-note">
+                        Legal Note
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/editorial">
+                        Editorial
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+                                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-box">
+                        <span class="content-box__headline">Guest Service</span>
+                                                        <ul class="nav-footer-links">
+                    <li class="nav-footer-links__item">
+                <a href="tel:+49(0)89233-96500"
+                   aria-label="Phone number"
+                   title="Phone number"
+                   class="link"
+                   >
+                    +49 (0)89 233-96500</a>
+            </li>
+                    <li class="nav-footer-links__item">
+                <a href="mailto:tourismus.gs@muenchen.de"
+                   aria-label="Email"
+                   title="Email"
+                   class="link"
+                   >
+                    tourismus.gs@muenchen.de</a>
+            </li>
+            </ul>
+                                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-box">
+                        <span class="content-box__headline">Newsletter</span>
+                        <p>News and information about the <a href="https://www.touristnews-muenchen.de/en/" target="_blank">touristic options</a> in Munich.</p>
+                                                                                                                        </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+    <div id="sectionindia">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.zdLU4BlhWkzVyzv5mAgwCgHaE6&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiontajmahal')"><h1 class="para">Tajmahal</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://thumbs.dreamstime.com/b/mysore-palace-karnataka-state-india-68300716.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionmysore')"><h1 class="para">Mysore Palace</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://w0.peakpx.com/wallpaper/94/127/HD-wallpaper-gateway-of-india-mumbai.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiongate')"><h1 class="para">Gateway Of India</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://media.istockphoto.com/id/535168027/photo/india-goa-palolem-beach.jpg?b=1&s=170667a&w=0&k=20&c=Ma8WYe9NqMN9UiCYTAUby4lsZoaPjV5IqFWz0ZB7Lrs=" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiongoa')"><h1 class="para">Goa</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://i.pinimg.com/originals/10/32/71/103271b0baeb51ae662a315d922f6995.png" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionred')"><h1 class="para">Red Fort</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionjapan">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://assets.cntraveller.in/photos/6352a8c00831d51e5aa10703/3:4/w_3000,h_4000,c_limit/tokyoGettyImages-1031467664.jpeg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiontokyo')"><h1 class="para">Tokyo</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://ceoworld.biz/wp-content/uploads/2020/11/Kyoto-Japan-3.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionkyoto')"><h1 class="para">Kyoto</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2019/10/Jozankei-Onsen-Hokkaido-Autumn-Top.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionhokkaido')"><h1 class="para">Hokkaido</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.meteorologiaenred.com/wp-content/uploads/2020/04/Monte-Fuji.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionmt')"><h1 class="para">Mt. Fuj</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://i.pinimg.com/originals/e0/c3/f1/e0c3f1e6e01820632907982dff9d6b39.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionhakuba')"><h1 class="para">Hakuba Valley</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionaustralia">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production5/d1996/54fdb73f-eee5-4612-a3e7-6fc7ed2f7bee.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionsydney')"><h1 class="para">Sydney</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://cdn.britannica.com/09/93309-050-DCAC1FDB/bridge-Yarra-River-Melbourne.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionmelborne')"><h1 class="para">Melborne</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.planetware.com/photos-large/AUS/australia-brisbane-city-2.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionbrisbane')"><h1 class="para">Brisbane</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://lp-cms-production.imgix.net/2019-06/6478bf63ea17597bb03104eef02ededc-tasmania.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiontasmania')"><h1 class="para">Tasmania</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/778604583c8c93e5d272f9d599e036925ed18f4b/big-e529ce2014e39b96b5af9edd98539909.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionbyron')"><h1 class="para">Byron Bay</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionitaly">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.ourescapeclause.com/wp-content/uploads/2019/02/Rome-51.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectioncolosseum')"><h1 class="para">Colosseum</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiontrevi')"><h1 class="para">Trevi Fountain</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://img.freepik.com/premium-photo/pantheon-former-roman-temple-all-gods-now-church-fountain-with-obelisk-piazza-della-rotonda-night-rome-italy_218319-4745.jpg?w=2000" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionpantheon')"><h1 class="para">Pantheon</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.thediaryofanomad.com/wp-content/w3-webp/uploads/2020/11/rome-for-3-days-in-rome-itinerary-vatican-dome-view.jpgw3.webp" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionrome')"><h1 class="para">Rome</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production143/d798/8d1f7b4d-99b8-4be3-9c43-ab67b36d0eab.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionvenice')"><h1 class="para">Venice</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionsouthkorea">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://media.timeout.com/images/105746183/750/422/image.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionbusan')"><h1 class="para">Busan</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://iamafrugaltraveler.com/wp-content/uploads/2020/08/FB_IMG_1598620569112.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionseoraksan')"><h1 class="para">Seoraksan National Park</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://img.onmanorama.com/content/dam/mm/en/travel/beyond-kerala/images/2020/10/19/jeju-island-korea.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionjeju')"><h1 class="para">Jeju Island</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://kongres-magazine.eu/wp-content/uploads/2018/02/Seoul-The-National-Museum-of-Korea.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionnational')"><h1 class="para">National Museum</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://thisiskoreatours.com/wp-content/uploads/2017/03/Changdeokgung-Palace.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionchangdeokgung')"><h1 class="para">Changdeokgung Palace</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionafrica">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.south-african-lodges.com/media/ChitwaChitwaGameLodge_2.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionkruger')"><h1 class="para">Kruger National Park</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://cdn.britannica.com/91/5391-050-78522514/Victoria-Falls-bridge-Zambezi-River-Zimbabwe-Zambia.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionvictoria')"><h1 class="para">Victoria Falls</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/Cape-Town-Beaches.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectioncape')"><h1 class="para">Cape Town</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://ychef.files.bbci.co.uk/976x549/p07zy3y6.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectioncairo')"><h1 class="para">Cairo</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://cdn.tourradar.com/s3/content-pages/72/1024x460/VrWdSi.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionmount')"><h1 class="para">Mount Kilimanjaro</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiondubai">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://lh3.googleusercontent.com/wyjwa8GRPMIKec5lxSHBe7LbweBzHyK39ni0P4eXTsu0nNRE_ZZbbJGdVmA2yqdBIQ" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionburj')"><h1 class="para">BURJ KHALIFA</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-al-arab/fallback-image/burj-al-arab-1-dtcm.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionburjal')"><h1 class="para">BURJ AL ARAB</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.artnews.com/wp-content/uploads/2022/05/Museum-of-Future-Exterior-3.jpg?w=1200" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionmueseum')"><h1 class="para">Mueseum Of Future</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://cdn.cnn.com/cnnnext/dam/assets/170509143610-dubai-miracle-garden---aerial-view-full-169.gif" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiondubaimiracle')"><h1 class="para">Dubai Miracle Garden</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://res.klook.com/image/upload/q_85/c_fill,w_750/v1643354137/blog/dmggzx9hsboq4k78iayp.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionatlantis')"><h1 class="para">Atlantis Aquaventure</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiongreenland">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://cdn.tourcms.com/a/5013/369/1/default.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionilulissat')"><h1 class="para">Ilulissat Ice-fjord</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://guidetogreenland.com/wp-content/uploads/2020/06/Kayaking-exhibition-at-National-Museum-in-Nuuk-cultural-activity-city-tour-Guide-to-Greenland-1024x683.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiongreenlandnational')"><h1 class="para">Greenland National</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2020/05/shutterstock_1504345343.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionthe')"><h1 class="para">The Northern Lights</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://usercontent.one/wp/www.rundtidanmark.dk/wp-content/uploads/2022/06/KMO00806.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionknud')"><h1 class="para">Knud Rasmussen</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/f1/9d/d8/qaqortoq-museum.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionqaqortoq')"><h1 class="para">Qaqortoq Museum</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionnorway">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production106/d1597/5303351b-a7d2-4775-994a-348002ea13d2.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionoslo')"><h1 class="para">Oslo</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production42/d1533/9e57a08d-5f4c-44a9-b042-a183cc160a46.jpg?impolicy=fcrop&w=800&h=533&q=medium" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionbergen')"><h1 class="para">Bergen</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.stavechurch.com/wp-content/uploads/2019/04/Heddal_1.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionheddal')"><h1 class="para">Heddal Stave Church</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Mus%C3%A9e_des_navires_vikings_%28Oslo%29_%284874556533%29.jpg/1200px-Mus%C3%A9e_des_navires_vikings_%28Oslo%29_%284874556533%29.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionviking')"><h1 class="para">Viking Ship Museum</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://visittrondheim.no/wp-content/uploads/2021/04/NidarosdommenTrondheim.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionnidaros')"><h1 class="para">Nidaros Cathedral</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiontajmahal">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://cdn1.matadornetwork.com/blogs/1/2019/09/Taj-Mahal-1200x849.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ-/; lit. 'Crown of the Palace'),[4][5][6] is an Islamic ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1631 by the Mughal emperor Shah Jahan (r. 1628–1658) to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.</p>
+                        <button onclick="display('sectionindia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionmysore">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://images.unsplash.com/photo-1600112356915-089abb8fc71a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXlzb3JlJTIwcGFsYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Mysore Palace, also known as Amba Vilas Palace, is a historical palace and a royal residence (house). It is located in Mysore, Karnataka. It used to be the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward. Mysore is commonly described as the 'City of Palaces', and there are seven palaces including this one. However, the Mysore Palace refers specifically to the one within the new fort.
+
+                            The land on which the palace now stands was originally known as mysuru (literally, "citadel"). Yaduraya built the first palace inside the Old Fort in the 14th century, which was set ablaze and reconstructed multiple times. The Old Fort was built of wood and thus easily caught fire, while the current fort was built of stone, bricks and wood. The current structure was constructed between 1897 and 1912, after the Old Palace burnt down, the current structure is also known as the New Fort. Mysore Palace is one of the most famous tourist attractions in India, after the Taj Mahal, with more than six million annual visitors.</p>
+                        <button onclick="display('sectionindia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiongate">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://i.pinimg.com/originals/45/1f/65/451f65cd9bd4b8b855cca534dde6156f.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Gateway of India is an arch-monument built in the early 20th century in the city of Bombay (Mumbai), India. It was erected to commemorate the landing of King-Emperor George V, the first British monarch to visit India, in December 1911 at Strand Road near Wellington Fountain.
+
+                            The foundation stone was laid in March 1913 for a monument built in the Indo-Islamic style, inspiring by elements of 16th-century Gujarati architecture. The final design of the monument by architect George Wittet was sanctioned only in 1914, and construction was completed in 1924. The structure is a memorial arch made of basalt, which is 26 metres (85 feet) high, with an architectural resemblance to a triumphial arch as well as Gujarati architecture of the time.</p>
+                        <button onclick="display('sectionindia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiongoa">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://images.unsplash.com/photo-1587922546307-776227941871?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z29hfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Goa (/ˈɡoʊə/ (listen)) is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats.[8][9] It is located between the Indian states of Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea forming its western coast. It is India's smallest state by area and its fourth-smallest by population. Goa has the highest GDP per capita among all Indian states,[3][10] two and a half times as high as the GDP per capita of the country as a whole.[11] The Eleventh Finance Commission of India named Goa the best-placed state because of its infrastructure, and India's National Commission on Population rated it as having the best quality of life in India (based on the commission's “12 Indicators”).[11] It is the third-highest ranking among Indian states in the human development index.[4]</p>
+                        <button onclick="display('sectionindia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionred">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://i.pinimg.com/originals/10/32/71/103271b0baeb51ae662a315d922f6995.png" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Red Fort or Lal Qila (Hindustani: [laːlqiːlaː]) is a historic fort in Old Delhi, Delhi in India that served as the main residence of the Mughal Emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1638, when he decided to shift his capital from Agra to Delhi. Originally red and white, its design is credited to architect Ustad Ahmad Lahori, who also constructed the Taj Mahal. The fort represents the peak in Mughal architecture under Shah Jahan, and combines Persianate palace architecture with Indian traditions.</p>
+                        <button onclick="display('sectionindia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionsydney">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.sydney.com/sites/sydney/files/styles/landscape_992x558/public/2022-02/164142-Sydney%20Harbour%20-%20sunrise%20over%20Circular%20Quay.jpg?itok=n9ElTvrY" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">SYDNEY, AUSTRALIA
+                            Welcome to Sydney and New South Wales!
+                            
+                            New South Wales is Australia’s most visited state, home to the famous Hunter Valley wine region, the spectacular Blue Mountains, celebrity surf town Byron Bay and the quirky outback capital of Broken Hill.
+                            
+                            Sydney is its vibrant capital and the largest city in Australia. Marvel at the iconic Sydney Opera House and Sydney Harbour Bridge, catch the ferry to Manly, have a swim at Bondi Beach and stroll through the historic Rocks district Despite being one of the most expensive cities in the world,Sydney frequently ranks in the top ten most liveable cities in the world.It is classified as an Alpha global city by the Globalization and World Cities Research Network, indicating its influence in the region and throughout the world. Ranked eleventh in the world for economic opportunity, Sydney has an advanced market economy with strengths in finance, manufacturing and tourism. Established in 1850, the University of Sydney was Australia's first university and is regarded as one of the world's leading universities.</p>
+                        <button onclick="display('sectionaustralia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionmelborne">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://a.cdn-hotels.com/gdcs/production136/d1412/02f493f5-ad2f-4aab-aa17-a1d3863a87fc.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Tourism in Melbourne is a significant industry in the state of Victoria, Australia. The country's second most-populous city, Melbourne was visited by 2.7 million international overnight visitors and 9.3 million domestic overnight visitors during the year ending December 2017.
+
+                            Often lauded as Australia's heart of culture, Melbourne's attractions include sporting events, art galleries, live music, festivals and fashion events that are popular with tourists and locals alike. Named the world's most liveable city from 2011 to 2017, Melbourne's culture and lifestyle have been increasingly promoted internationally, leading to average year-on-year growth of international visitors of 10% in the five years to 2017.</p>
+                        <button onclick="display('sectionaustralia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionbrisbane">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.aktivtour.pl/wp-content/uploads/brisbane.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Brisbane  is the capital and most populous city of the Australian state of Queensland, and the third-most populous city in Australia and Oceania, with a population of approximately 2.6 million.Brisbane lies at the centre of the South East Queensland metropolitan region, which encompasses a population of around 3.8 million. The Brisbane central business district is situated within a peninsula of the Brisbane River about 15 km (9 mi) from its mouth at Moreton Bay, a bay of the Coral Sea.Brisbane is located in the hilly floodplain of the Brisbane River Valley between Moreton Bay and the Taylor and D'Aguilar mountain ranges. It sprawls across several local government areas, most centrally the City of Brisbane, Australia's most populous local government area. The demonym of Brisbane is Brisbanite.</p>
+                        <button onclick="display('sectionaustralia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiontasmania">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.kentremovalsstorage.com.au/wp/wp-content/uploads/2022/09/Moving_to_Tasmania_-_Hobart.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Tasmania  is an island state of Australia.It is located 240 kilometres (150 miles) to the south of the Australian mainland, separated from it by the Bass Strait, with the archipelago containing the southernmost point of the country. The state encompasses the main island of Tasmania, the 26th-largest island in the world, and the surrounding 1000 islands.[16] It is Australia's least populous state, with 569,825 residents as of December 2021. The state capital and largest city is Hobart, with around 40 percent of the population living in the Greater Hobart area.
+
+                            Tasmania's main island was inhabited by Aboriginal peoples for up to 40,000 years before British colonization. It is thought that Aboriginal Tasmanians became separated from the mainland Aboriginal groups about 11,700 years ago, after rising sea levels formed Bass Strait.</p>
+                        <button onclick="display('sectionaustralia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionbyron">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://byronbay.com/wp-content/uploads/2022/01/tweed-heads-696x440-1.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Byron Bay is a beachside town located in the far-northeastern corner of the state of New South Wales, Australia on Bundjalung Country. It is located 772 kilometres (480 mi) north of Sydney and 165 kilometres (103 mi) south of Brisbane. Cape Byron, a headland adjacent to the town, is the easternmost point of mainland Australia. At the 2021 census, the town had a permanent population of 6,330.It is the largest town of Byron Shire, though not the shire's administrative centre (which is Mullumbimby).
+
+                            Byron Bay and surrounds is located on unceded land of the Bundjalung Nation of the Arakwal, Minjungbal and the Widjabul people who have lived by the coast for at least 22,000 years. The land and people were created by Nguthungulli that rests at what is now called Julian Rocks.</p>
+                        <button onclick="display('sectionaustralia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiontokyo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://content.r9cdn.net/rimg/dimg/ca/7e/9ae1c4b2-city-21033-16c1b1c620d.jpg?crop=true&width=1020&height=498" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Tokyo  officially the Tokyo Metropolis  is the capital and largest city of Japan.Formerly known as Edo, its metropolitan area (13,452 square kilometers or 5,194 square miles) is the most populous in the world, with an estimated 37.468 million residents as of 2018. The city proper has a population of 13.99 million people.Located at the head of Tokyo Bay, the prefecture forms part of the Kantō region on the central coast of Honshu, Japan's largest island. Tokyo serves as Japan's economic center.
+
+                            Tokyo is the second-largest urban economy worldwide by gross domestic product after New York City, and is categorized as an Alpha+ city by the Globalization and World Cities Research Network. It is also Japan's leading business hub as part of an industrial region that includes the cities of Yokohama, Kawasaki, and Chiba. As of 2021, Tokyo is home to 37 companies of the Fortune Global 500.In 2020, the city ranked fourth on the Global Financial Centres Index, behind only New York City, London, and Shanghai.Tokyo is home to the world's tallest tower, the Tokyo Skytree, and the world's largest underground floodwater diversion facility, the Metropolitan Area Outer Underground Discharge Channel (located in Kasukabe, Saitama, a suburb of Tokyo).The Tokyo Metro Ginza Line, opened in 1927, is the oldest underground metro line in East Asia.</p>
+                        <button onclick="display('sectionjapan')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionkyoto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://content.r9cdn.net/rimg/dimg/83/d4/85f68013-city-20339-16489ec9b8b.jpg?crop=true&width=1020&height=498" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Kyoto officially Kyoto City,  is the capital city of Kyoto Prefecture in Japan. Located in the Kansai region on the island of Honshu, Kyoto forms a part of the Keihanshin metropolitan area along with Osaka and Kobe. As of 2020, the city had a population of 1.46 million. The city is the cultural anchor of a substantially larger metropolitan area known as Greater Kyoto, a metropolitan statistical area (MSA) home to a census-estimated 3.8 million people.
+
+                            Kyoto is one of the oldest municipalities in Japan, having been chosen in 794 as the new seat of Japan's imperial court by Emperor Kanmu. Kyoto is considered the cultural capital of Japan and is a major tourist destination. It is home to numerous Buddhist temples, Shinto shrines, palaces and gardens, some of which have been designated collectively as a World Heritage Site by UNESCO.</p>
+                        <button onclick="display('sectionjapan')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionhokkaido">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://previews.123rf.com/images/tasch8790/tasch87901810/tasch8790181000207/110919856-in-the-fall-scenery-of-hokkaido-sapporo-jozankei-hot-spring.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Hokkaidō  is Japan's second largest island and comprises the largest and northernmost prefecture, making up its own region. The Tsugaru Strait separates Hokkaidō from Honshu; the two islands are connected by the undersea railway Seikan Tunnel.
+
+                            The largest city on Hokkaidō is its capital, Sapporo, which is also its only ordinance-designated city. Sakhalin lies about 43 kilometers (26 mi) to the north of Hokkaidō, and to the east and northeast are the Kuril Islands, which are administered by Russia, though the four most southerly are claimed by Japan. Hokkaidō was formerly known as Ezo, Yezo, Yeso, or Yesso.[2]
+                            
+                            Although there were Japanese settlers who ruled the southern tip of the island since the 16th century, Hokkaido was considered foreign territory that was inhabited by the indigenous people of the island, known as the Ainu people.[3] While geographers such as Mogami Tokunai and Mamiya Rinzō explored the island in the Edo period,[4] Japan's governance was limited to Oshima Peninsula until the 17th century</p>
+                        <button onclick="display('sectionjapan')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionmt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://images.ctfassets.net/bth3mlrehms2/2cCxpmVnFuv9cwMkr2NsqO/0f41647ab438ea7efa23b0d260123a50/Japan_Tokio_Skyline_und_Mt._Fuji.jpg?w=3721&h=2093&fl=progressive&q=50&fm=jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Mount Fuji is located on the island of Honshū, is the highest mountain in Japan, with a summit elevation of 3,776.24 m (12,389 ft 3 in). It is the second-highest volcano located on an island in Asia (after Mount Kerinci on the island of Sumatra), and seventh-highest peak of an island on Earth.[1] Mount Fuji is an active stratovolcano that last erupted from 1707 to 1708.[4][5] The mountain is located about 100 km (62 mi) southwest of Tokyo and is visible from there on clear days. Mount Fuji's exceptionally symmetrical cone, which is covered in snow for about five months of the year, is commonly used as a cultural icon of Japan and it is frequently depicted in art and photography, as well as visited by sightseers and climbers.[6]
+
+                            Mount Fuji is one of Japan's "Three Holy Mountains" along with Mount Tate and Mount Haku. It is a Special Place of Scenic Beauty and one of Japan's Historic Sites.It was added to the World Heritage List as a Cultural Site on June 22, 2013. According to UNESCO, Mount Fuji has "inspired artists and poets and been the object of pilgrimage for centuries". UNESCO recognizes 25 sites of cultural interest within the Mount Fuji locality. These 25 locations include the mountain and the Shinto shrine, Fujisan Hongū Sengen Taisha.</p>
+                        <button onclick="display('sectionjapan')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionhakuba">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://cdn-ejlmj.nitrocdn.com/gBQBHEihqfOamqfuOKwsszSazlrkjnwk/assets/static/optimized/rev-aec5689/wp-content/uploads/DJI_0484_2-1024x576.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Hakuba  is a village located in Nagano Prefecture, Japan. As of 1 April 2019, the village had an estimated population of 9,007 in 4267 households,[1] and a population density of 48 persons per km2. The total area of the village is 189.36 square kilometres (73.11 sq mi). Hakuba is an internationally renowned ski resort town in the northern Japan Alps. As the surrounding valley has an annual snow fall of over 11 meters, it is the central hub for 10 ski resorts with more than 200 runs. The village was the main event venue for 1998 Winter Olympics (Alpine, Ski Jump, Crosscountry).
+
+                            Hakuba is located in a mountain basin in far northwestern Nagano Prefecture, bordered by Toyama Prefecture to the west. The 2900 meter Tateyama Mountains border the village to the west. Much of the village is within the borders of the Chūbu-Sangaku National Park.The economy of Hakuba is heavily dependent on seasonal tourism.</p>
+                        <button onclick="display('sectionjapan')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectioncolosseum">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://aws-tiqets-cdn.imgix.net/images/content/b3a66adfc33a4c1f9d8480800ee981c9.jpg?auto=format&fit=crop&h=333&ixlib=python-3.2.1&q=70&w=500&s=17591fcdc23a9427f0c649273de806e0" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age. Construction began under the emperor Vespasian (r. 69–79 AD) in 72[1] and was completed in 80 AD under his successor and heir, Titus (r. 79–81).Further modifications were made during the reign of Domitian (r. 81–96).[3] The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre  by later classicists and archaeologists for its association with their family name (Flavius).
+
+                            The Colosseum is built of travertine limestone, tuff (volcanic rock), and brick-faced concrete. It could hold an estimated 50,000 to 80,000 spectators at various points in its history, having an average audience of some 65,000.</p>
+                        <button onclick="display('sectionitaly')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiontrevi">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.travelandleisure.com/thmb/CKxA_iBAtx1zYw_7EevV4cuxgH0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/trevi-fountain-rome-italy-TREVI0217-4b6f7385c7f0436ba3d5fa2c061a1791.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Trevi Fountain  is an 18th-century fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini and several others. Standing 26.3 metres (86 ft) high and 49.15 metres (161.3 ft) wide,it is the largest Baroque fountain in the city and one of the most famous fountains in the world.
+
+                            The fountain, at the junction of three roads marks the terminal point of the "modern" Acqua Vergine—the revived Aqua Virgo, one of the aqueducts that supplied water to ancient Rome.The fountain was refurbished once in 1988 to remove discoloration caused by smog, and again in 1998; the stonework was scrubbed and all cracks and other areas of deterioration were repaired by skilled artisans, and the fountain was equipped with recirculating pumps</p>
+                        <button onclick="display('sectionitaly')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionpantheon">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.learnreligions.com/thmb/q41tKYaPMiGyNYTtlRxEouU5JgY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pantheon--rome--italy-870287362-5a87671b6bf06900375c06f2.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Pantheon from Greek Πάνθειον Pantheion, "[temple] of all the gods") is a former Roman temple and, since 609 AD, a Catholic church (Basilica di Santa Maria ad Martyres or Basilica of St. Mary and the Martyrs) in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus (27 BC – 14 AD). It was rebuilt by the emperor Hadrian and probably dedicated c. 126 AD. Its date of construction is uncertain, because Hadrian chose not to inscribe the new temple but rather to retain the inscription of Agrippa's older temple, which had burned down.
+
+                            The building is cylindrical with a portico of large granite Corinthian columns (eight in the first rank and two groups of four behind) under a pediment.</p>
+                        <button onclick="display('sectionitaly')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionrome">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.roadaffair.com/wp-content/uploads/2017/10/vatican-night-rome-italy-shutterstock_206557156.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Rome (Italian and Latin: Roma [ˈroːma] (listen)) is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome, and a special comune named Comune di Roma Capitale. With 2,860,009 residents in 1,285 km2 (496.1 sq mi), Rome is the country's most populated comune and the third most populous city in the European Union by population within city limits. The Metropolitan City of Rome, with a population of 4,355,725 residents, is the most populous metropolitan city in Italy.Its metropolitan area is the third-most populous within Italy. Rome is located in the central-western portion of the Italian Peninsula, within Lazio (Latium), along the shores of the Tiber. Vatican City (the smallest country in the world)[5] is an independent country inside the city boundaries of Rome, the only existing example of a country within a city. Rome is often referred to as the City of Seven Hills due to its geographic location, and also as the "Eternal City".Rome is generally considered to be the "cradle of Western civilization and Christian culture", and the centre of the Catholic Church.</p>
+                        <button onclick="display('sectionitaly')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionvenice">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/04/07/16/istock-491391396.jpg?width=1200" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Venice   is a city in northeastern Italy and the capital of the Veneto region. It is built on a group of 118 small islands[3] that are separated by canals and linked by over 400 bridges. The islands are in the shallow Venetian Lagoon, an enclosed bay lying between the mouths of the Po and the Piave rivers (more exactly between the Brenta and the Sile). In 2020, around 258,685 people resided in greater Venice or the Comune di Venezia, of whom around 55,000 live in the historical island city of Venice (centro storico) and the rest on the mainland (terraferma). Together with the cities of Padua and Treviso, Venice is included in the Padua-Treviso-Venice Metropolitan Area (PATREVE), which is considered a statistical metropolitan area, with a total population of 2.6 million.
+
+                            The name is derived from the ancient Veneti people who inhabited the region by the 10th century BC.The city was historically the capital of the Republic of Venice for over a millennium, from 697 to 1797. It was a major financial and maritime power during the Middle Ages and Renaissance, and a staging area for the Crusades and the Battle of Lepanto, as well as an important center of commerce—especially silk, grain, and spice, and of art from the 13th century to the end of the 17th.</p>
+                        <button onclick="display('sectionitaly')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionbusan">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.remotelands.com/storage/media/3325/conversions/b160927069-banner-size.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Busan  officially known as Busan Metropolitan City, is South Korea's most populous city after Seoul, with a population of over 3.4 million inhabitants.Formerly romanized as Pusan, it is the economic, cultural and educational center of southeastern South Korea, with its port being Korea's busiest and the sixth-busiest in the world.[a] The surrounding "Southeastern Maritime Industrial Region" (including Ulsan, South Gyeongsang, Daegu, and some of North Gyeongsang and South Jeolla) is South Korea's largest industrial area.
+
+                            Busan is divided into 15 major administrative districts and a single county, together housing a population of approximately 3.6 million. The full metropolitan area, the Southeastern Maritime Industrial Region, has a population of approximately 8 million.The most densely built-up areas of the city are situated in a number of narrow valleys between the Nakdong and the Suyeong Rivers, with mountains separating most of the districts. The Nakdong is Korea's longest river and Busan's Haeundae Beach is also the country's largest.</p>
+                        <button onclick="display('sectionsouthkorea')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionseoraksan">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://cdn2.veltra.com/ptr/20190923063926_45903472_13307_0.jpg?imwidth=800&impolicy=custom" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Seoraksan National Park is a national park in South Korea. It listed by the South Korean government with UNESCO as a tentative World Heritage site. The government designated the area as a nature reserve in 1965 and UNESCO designated it as a biosphere reserve in 1982. It was also the first Korean national park to be named under the National Park Law in 1970. Located on the east-central Korean peninsula, the reserve includes the Dinosaur Ridge, Injegun, Yanyanggun, and Sokchosi. It is popular with tourists and nature enthusiasts. It is home to many rare taxa of flora and fauna.
+
+                            The reserve has an area of 163.6 square kilometres (63.2 sq mi) and includes many mountain peaks measuring over 1,200 metres above sea level, the tallest being Daecheongbong, at an altitude of 1,708 metres (5,604 ft). The ranges are composed largely of dissected granite and gneiss. The annual precipitation is about 1,000 mm (39 inches) in Inner Soraksan and 1,300 mm (51 inches) in Outer Soraksan.Cultural landmarks in the reserve include the Buddhist temples Baekdamsa and Sinheungsa.</p>
+                        <button onclick="display('sectionsouthkorea')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionjeju">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://i0.wp.com/asianatimes.com/wp-content/uploads/2022/09/jeju-luxe-adventure-traveler.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Jeju Island  is South Korea's largest island, covering an area of 1,833.2 km2 (707.8 sq mi), which is 1.83 percent of the total area of the country. It is also the most populous island in South Korea; at the end of September 2020, the total resident registration population of Jeju Special Self-Governing Province is 672,948, of which 4,000 reside on outlying islands such as the Chuja Islands and Udo Island. The total area of the Jeju Special Self-Governing Province is 1,849 km.[2]
+
+                            The island lies in the Korea Strait, south of the Korean Peninsula, and South Jeolla Province. It is located 82.8 km (51.4 mi) off the nearest point on the peninsula.[3] Jeju is the only self-governing province in South Korea, meaning that the province is run by local inhabitants instead of politicians from the mainland.
+                            
+                            Tourism is an important component of the local economy. The island is sometimes called "South Korea’s Hawaii". Tourists from China do not require a visa to visit Jeju, unlike the rest of South Korea, and in the 2010s have started visiting on specialised package tours to acquire a South Korean driver's license; the test is similar to that in China, but can be completed in less time and is easier, application and test forms are available in many languages, and a South Korean license, unlike a Chinese license, makes the holder eligible for an International Drivers License</p>
+                        <button onclick="display('sectionsouthkorea')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionnational">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://tongglobalcdn.visitkorea.or.kr/cms/resource/72/2658572_image2_1.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The National Museum of Korea is the flagship museum of Korean history and art in South Korea and is the cultural organization that represents Korea. Since its establishment in 1945,the museum has been committed to various studies and research activities in the fields of archaeology, history, and art, continuously developing a variety of exhibitions and education programs.
+
+                            It was relocated to the Yongsan District in Seoul in 2005. On June 24, 2021, the National Museum of Korea opened a new branch inside Incheon International Airport. Located in the boarding area of the airport in front of Gate No.22, the branch was opened in celebration of the museum's 20th anniversary.The museum is divided into three floors. Symbolically, the left of the museum is supposed to represent the past, while the right side of the museum represents the future. The ground floor contains parks; gardens of indigenous plants; waterfalls and pools; and a collection of pagodas, stupas, lanterns, and steles (including National Treasure of Korea No. 2, the Great Bell of Bosingak, the exemplar of Korean bells of the Joseon period).</p>
+                        <button onclick="display('sectionsouthkorea')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionchangdeokgung">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://img.freepik.com/premium-photo/autumn-changdeokgung-palace-seoul-south-korea_258360-143.jpg?w=2000" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Changdeokgung  also known as Changdeokgung Palace or Changdeok Palace, is set within a large park in Jongno District, Seoul, South Korea. It is one of the "Five Grand Palaces" built by the kings of the Joseon dynasty (1392–1897). As it is located east of Gyeongbok Palace, Changdeokgung—along with Changgyeonggung—is also referred to as the "East Palace" 
+
+                            Changdeokgung was the most favored palace of many Joseon kings and retained many elements dating from the Three Kingdoms of Korea period that were not incorporated in the more contemporary Gyeongbokgung. One such element is the fact that the buildings of Changdeokgung blend with the natural topography of the site instead of imposing themselves upon it. Like the other Five Grand Palaces in Seoul, it was heavily damaged during the Japanese occupation of Korea (1910–1945). Currently, only about 30% of the pre-Japanese structures of the East Palace Complex (Changdeokgung together with Changgyeonggung) survive.Changdeok Palace moonlight tours are special events where visitors can experience life at the palace. It typically took about two hours and starts at Donhwamun Gate, the main gate of Changdeok Palace</p>
+                        <button onclick="display('sectionindia')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionkruger">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://cdn.audleytravel.com/1050/750/79/8005267-chitwa-chitwa-game-lodge-the-sabi-sand-wildtuin.webp" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Kruger National Park is a South African National Park and one of the largest game reserves in Africa. It covers an area of 19,623 km2 (7,576 sq mi) in the provinces of Limpopo and Mpumalanga in northeastern South Africa, and extends 360 km (220 mi) from north to south and 65 km (40 mi) from east to west. The administrative headquarters are in Skukuza. Areas of the park were first protected by the government of the South African Republic in 1898, and it became South Africa's first national park in 1926.
+
+                            To the west and south of the Kruger National Park are the two South African provinces of Limpopo and Mpumalanga, respectively. To the north is Zimbabwe, and to the east is Mozambique. It is now part of the Great Limpopo Transfrontier Park, a peace park that links Kruger National Park with the Gonarezhou National Park in Zimbabwe, and with the Limpopo National Park in Mozambique.
+                            
+                            The park is part of the Kruger to Canyons Biosphere, an area designated by the United Nations Educational, Scientific and Cultural Organization (UNESCO) as an International Man and Biosphere Reserve.</p>
+                        <button onclick="display('sectionafrica')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionvictoria">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.worldatlas.com/r/w768/upload/0b/ff/d8/shutterstock-1079759933.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Victoria Falls is a waterfall on the Zambezi River in southern Africa, which provides habitat for several unique species of plants and animals. It is located on the border between Zambia and Zimbabwe[1] and is one of the world's largest waterfalls, with a width of 1,708 m (5,604 ft).
+
+                            Archeological sites and oral history describe a long record of African knowledge of the site. Though known to some European geographers before the 19th century, Scottish missionary David Livingstone identified the falls in 1855, providing the English colonial name of Victoria Falls after Queen Victoria. Since the mid 20th century, the site has been an increasingly important source of tourism. Zambia and Zimbabwe both have national parks and tourism infrastructure at the site. Research in the late 2010s found that climate change caused precipitation variability is likely to change the character of the fall.The falls are formed where the full width of the river plummets in a single vertical drop into a transverse chasm 1,708 metres (5,604 ft) wide, carved by its waters along a fracture zone in the basalt plateau. The depth of the chasm, called the First Gorge, varies from 80 metres (260 ft) at its western end to 108 metres (354 ft) in the centre.</p>
+                        <button onclick="display('sectionafrica')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectioncape">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/cape-town-aerial-view-greenpoint-stadium.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Cape Town  is one of South Africa's three capital cities, serving as the seat of the Parliament of South Africa.It is the legislative capital of the country, the oldest city in the country, and the second largest (after Johannesburg). Colloquially named the Mother City, it is the largest city of the Western Cape province,[9] and is managed by the City of Cape Town metropolitan municipality. The other two capitals are Pretoria, the executive capital, located in Gauteng, where the Presidency is based, and Bloemfontein, the judicial capital in the Free State, where the Supreme Court of Appeal is located.
+
+                            Cape Town is ranked as a Beta world city by the Globalization and World Cities Research Network. The city is known for its harbour, for its natural setting in the Cape Floristic Region, and for landmarks such as Table Mountain and Cape Point. Cape Town is not only a popular international tourist destination in South Africa, but Africa as a whole. This is due to its mild climate, natural setting, and well-developed infrastructure. The city has several well-known natural features that attract tourists, most notably Table Mountain,[126] which forms a large part of the Table Mountain National Park and is the back end of the City Bowl. Reaching the top of the mountain can be achieved either by hiking up, or by taking the Table Mountain Cableway. Cape Point is the dramatic headland at the end of the Cape Peninsula. Many tourists also drive along Chapman's Peak Drive, a narrow road that links Noordhoek with Hout Bay, for the views of the Atlantic Ocean and nearby mountains. It is possible to either drive or hike up Signal Hill for closer views of the City Bowl and Table Mountain</p>
+                        <button onclick="display('sectionafrica')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectioncairo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.tripsavvy.com/thmb/M5y_QRYwXWBjStyb3fOtgsYZCdQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1285105352-033b77555aea41bc8afaf164ad4f1ee6.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Cairo  is the capital of Egypt and the largest urban agglomeration in Africa, the Arab world and the Middle East. The Greater Cairo metropolitan area, with a population of 21.9 million,is the 12th-largest in the world by population. Cairo is associated with ancient Egypt, as the Giza pyramid complex and the ancient cities of Memphis and Heliopolis are located in its geographical area. Located near the Nile Delta,the city first developed as Fustat, a settlement founded after the Muslim conquest of Egypt in 640 next to an existing ancient Roman fortress, Babylon. Under the Fatimid dynasty a new city, al-Qāhirah, was founded nearby in 969. It later superseded Fustat as the main urban centre during the Ayyubid and Mamluk periods (12th–16th centuries). Cairo has long been a centre of the region's political and cultural life, and is titled "the city of a thousand minarets" for its preponderance of Islamic architecture. Cairo's historic center was awarded World Heritage Site-status in 1979.Cairo is considered a World City with a "Beta +" classification according to GaWC.
+
+                            Today, Cairo has the oldest and largest cinema and music industry in the Arab World, as well as the world's second-oldest institution of higher learning, Al-Azhar University. . It is still occupied by the military today, but is now open as a tourist attraction comprising, notably, the National Military Museum, the 14th century Mosque of al-Nasir Muhammad, and the 19th century Mosque of Muhammad Ali which commands a dominant position on Cairo's skyline.</p>
+                        <button onclick="display('sectionafrica')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionmount">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://newyorkfolk.com/wp-content/uploads/2022/08/bf741ce92f515f690cb82c8963d9db90.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Mount Kilimanjaro  is a dormant volcano in Tanzania. It has three volcanic cones: Kibo, Mawenzi, and Shira. It is the highest mountain in Africa and the highest single free-standing mountain above sea level in the world: 5,895 metres (19,341 ft) above sea level and about 4,900 metres (16,100 ft) above its plateau base. It is the highest volcano in Africa and the Eastern Hemisphere.
+
+                            Kilimanjaro is the fourth most topographically prominent peak on Earth. It is part of Kilimanjaro National Park and is a major hiking and climbing destination. Because of its shrinking glaciers and ice fields, which are projected to disappear between 2025 and 2035, it has been the subject of many scientific studies.Tourist mapping was first published by the Ordnance Survey in England in 1989 based on the original DOS mapping at a scale of 1:100,000, with 100 feet (30 m) contour intervals, as DOS 522.West Col Productions produced a map with tourist information in 1990, at a scale of 1:75,000, with 100 metres (330 ft) contour intervals.</p>
+                        <button onclick="display('sectionafrica')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionburj">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://maxhouzez.com/sg/wp-content/uploads/sites/3/2022/06/1655950051_maxresdefault.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Burj Khalifa  known as the Burj Dubai prior to its inauguration in 2010, is a skyscraper in Dubai, United Arab Emirates. It is known for being the world’s tallest building. With a total height of 829.8 m (2,722 ft, or just over half a mile) and a roof height (excluding antenna, but including a 223 m spire of 828 m (2,717 ft), the Burj Khalifa has been the tallest structure and building in the world since its topping out in 2009, supplanting Taipei 101, the previous holder of that status.
+
+                            Construction of the Burj Khalifa began in 2004, with the exterior completed five years later in 2009. The primary structure is reinforced concrete and some of the structural steel for the building originated from the Palace of the Republic in East Berlin, the former East German parliament.The building was opened in 2010 as part of a new development called Downtown Dubai. It was designed to be the centerpiece of large-scale, mixed-use development. The decision to construct the building was based on the government's decision to diversify from an oil-based economy, and for Dubai to gain international recognition.[citation needed] The building is named in honor of the former president of the United Arab Emirates, Khalifa bin Zayed Al Nahyan Abu Dhabi and the UAE government lent Dubai money to pay its debts.The decision to build Burj Khalifa was reportedly based on the government's decision to diversify from an oil-based economy to one that is service and tourism based.</p>
+                        <button onclick="display('sectiondubai')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionburjal">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Burj_Al_Arab_and_Jumeirah_Beach_%289601659067%29.jpg/1200px-Burj_Al_Arab_and_Jumeirah_Beach_%289601659067%29.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Burj Al Arab  is a luxury hotel located in the city of Dubai, United Arab Emirates. Managed by Jumeirah hotel group, it is one of the tallest hotels in the world, although 39% of its total height is made up of non-occupiable space.Burj Al Arab stands on an artificial island that is 280 m (920 ft) from Jumeirah Beach and is connected to the mainland by a private curving bridge. The shape of the structure is designed to resemble the sail of a ship. It has a helipad near the roof, at a height of 210 m (689 ft) above ground.The Burj Al Arab was designed by the multidisciplinary consultancy Atkins, led by architect Tom Wright. The design and construction were managed by Canadian engineer Rick Gregory, also of WS Atkins. Construction of the island began in 1994 and involved up to 2,000 construction workers during peak construction. It was built to resemble the billowing spinnaker sail of a J-class yacht.Two "wings" spread in a V to form a vast "mast", while the space between them is enclosed in a massive atrium. The setting of a high rise building on saturated soil and the novelty of the project required groundbreaking dynamic analysis and design to take into consideration soil-structure interaction, effect of water, high winds, and helipad among other loads, to help finalize the design and take the project into construction .
+
+                            has attracted criticism as well "a contradiction of sorts, considering how well-designed and impressive the construction ultimately proves to be. The contradiction here seems to be related to the hotel's decor. "This extraordinary investment in state-of-the-art construction technology stretches the limits of the ambitious urban imagination in an exercise that is largely due to the power of excessive wealth." Another critic includes negative critiques for the city of Dubai as well</p>
+                        <button onclick="display('sectiondubai')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionmueseum">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://res.klook.com/image/upload/c_fill,w_750,h_500,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/prehuxcwty65htfssb9h.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Museum of the Future  is an exhibition space for innovative and futuristic ideologies, services, and products. Located in the Financial District of Dubai, UAE, the Museum of the Future has three main elements: green hill, building, and void. Founded by the Dubai Future Foundation. It was set to open in 2021, but as of December of that year had yet to fully do so.The Government of the United Arab Emirates later opened the museum on 22 February 2022. The choice of the date was officially made because the 22nd of February 2022 is a palindrome date.
+
+                            The goal of this museum is to promote technological development and innovation, especially in the fields of robotics and artificial intelligence.As part of the World Government Summit, the Museum of the Future has held several exhibitions since its inauguration in 2016. Each of the exhibitions had a different theme focused on the role of technology in the different sectors.The sixth exhibition of the Museum of the Future was held in 2019, and it explored the concepts of human augmentation and focused on the human body and mind.It is also one of the tourist spot.</p>
+                        <button onclick="display('sectiondubai')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiondubaimiracle">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://amusementlogic.com/wp-content/uploads/2021/06/DUBAI-MIRACLE-GARDEN-5-C.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The garden was launched on Valentine's Day in 2013. It occupies over 72,000 square metres (780,000 sq ft), making it the world's largest natural flower garden, featuring over 50 million flowers and 250 million plants. Dubai Miracle Garden.
+                            The concept of the first miracle garden project was formed under an agreement between Dubailand and the Dubai Properties Group destination. The project development was done under an agreement with Akar Landscaping and Agriculture Company, led by Jordanian businessman Abdel Naser Rahhal.[6] The cost of the project was estimated at AED 40 million .
+                            
+                            Phase one of the project was completed and opened in February 2013 which consisted of 21,000 sq ft (2,000 m2) outdoor facility including vertical and horizontal landscaping design where each of them have their own design.[5] The development of phase one took two months and required 400 workers. Phase two of the project was initiated in mid-June 2013 and was completed in October, where it involved the 70 percent expansion of the 21,000 sq ft and construction of the 850,000 sq ft (79,000 m2) multistory car park, which increased the total area of the garden to 2 million sq ft (190 thousand m2) Phase two development included the addition of the floral clock, the butterfly garden, retail stores and mosques.</p>
+                        <button onclick="display('sectiondubai')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionatlantis">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.dsktravelsdubai.com/wp-content/uploads/2019/04/WhatsApp-Image-2019-05-07-at-12.39.31-AM.jpeg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Home to adventure-seekers and known for its iconic adrenaline-inducing rides, located in the human-made Palm islands, Aquaventure Waterpark is the largest waterpark in Dubai and the middle east. This phenomenal water park is famous for its extensive range of iconic attractions, marine activities, private beaches, conventionally designed waterslides, and children's play zone.
+
+                            Get into the venture of Dubai's most famous water park featured with unique blends of thrill, adventure and fun altogether. Plan your day in a way so that you can cover both the areas while spending the entire day in rides and with more than 65,000 marine creatures in the Lost Chambers Aquarium, the only underwater sea aquarium in Dubai. Fetch the opportunity to get lost in Aqua Venture waterpark's wilderness with the Lost Chamber Aquarium and frame this vacation with many memorable experiences.</p>
+                        <button onclick="display('sectiondubai')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionoslo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://scwcontent.affino.com/AcuCustom/Sitename/DAM/020/Oslo_AdobeStock_302906358_1.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">In 2018 Oslo is named one of Lonely Planet's Top Ten Cities. The travel guide's best-selling yearbook Best in Travel has selected Oslo as one of the ten best cities in the world to visit in 2018, citing the Norwegian capital's "innovative architecture and unmissable museums alongside cool bars, bistros and cafés".Oslo Norwegian is the capital and most populous city of Norway. It constitutes both a county and a municipality. The municipality of Oslo had a population of 702,543 in 2022, while the city's greater urban area had a population of 1,019,513 in 2019, and the metropolitan area had an estimated population of 1,546,706 in 2021.
+
+                            During the Viking Age the area was part of Viken. Oslo was founded as a city at the end of the Viking Age in 1040 under the name Ánslo, and established as a kaupstad or trading place in 1048 by Harald Hardrada. The city was elevated to a bishopric in 1070 and a capital under Haakon V of Norway around 1300. Personal unions with Denmark from 1397 to 1523 and again from 1536 to 1814 reduced its influence. After being destroyed by a fire in 1624, during the reign of King Christian IV, a new city was built closer to Akershus Fortress and named Christiania in honour of the king. It became a municipality (formannskapsdistrikt) on 1 January 1838. The city functioned as the capital of Norway during the 1814–1905 union between Sweden and Norway.</p>
+                        <button onclick="display('sectionnorway')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionbergen">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://res.cloudinary.com/simpleview/image/upload/v1574085889/clients/norway/bryggen_wharf_bergen_hordaland_fjord_norway_photo_florian_olbrechts_34ad36ea-f7bc-4150-b48b-af2c2c14628f.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Tourism is an important income source for the city. The hotels in the city may be full at times,[114][115] due to the increasing number of tourists and conferences. Bergen is recognized as the unofficial capital of the region known as Western Norway, and recognized and marketed as the gateway city to the world-famous fjords of Norway, and for that reason, it has become Norway's largest – and one of Europe's largest – cruise ship ports of call.
+
+                            Bergen is a city and municipality in Vestland county on the west coast of Norway. As of 2021, its population is roughly 285,900.[2] Bergen is the second-largest city in Norway. The municipality covers 465 square kilometres (180 sq mi) and is on the peninsula of Bergenshalvøyen. The city centre and northern neighbourhoods are on Byfjorden, 'the city fjord', and the city is surrounded by mountains; Bergen is known as the "city of seven mountains". Many of the extra-municipal suburbs are on islands. Bergen is the administrative centre of Vestland county. 
+                            
+                            Trading in Bergen may have started as early as the 1020s. According to tradition. 'the green meadow among the mountains'. It served as Norway's capital in the 13th century, and from the end of the 13th century became a bureau city of the Hanseatic League. Until 1789, Bergen enjoyed exclusive rights to mediate trade between Northern Norway and abroad.</p>
+                        <button onclick="display('sectionnorway')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionheddal">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://assets.simpleviewcms.com/simpleview/image/fetch/c_fill,f_jpg,h_400,q_65,w_587/https://media.newmindmedia.com/TellUs/image/%3Ffile%3Diamnordic-Heddal-stavkirke_140519930.jpg%26dh%3D638%26dw%3D800%26t%3D4" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Heddal Stave Church is a popular tourist attraction, and it is open to the public during the summer season. The church is still in use, and remains a popular place to get married.[7] In the 19th century, it became one of the first stave churches to be featured in a scholarly publication, described and depicted in one of Johannes Flintoe's illustrations.It is a parish church of the Church of Norway in Notodden Municipality in Vestfold of Telemark county, Norway. It is located in the village of Heddal. It is the church for the Heddal parish which is part of the Telemark prosti (deanery) in the Diocese of Agder of Telemark. The wooden, triple nave stave church was built in a long church design around the year 1200 using plans drawn up by an unknown architect. The church seats about 180 people.
+
+                            The church is one of the 28 surviving stave churches in Norway and it is considered to be the largest of the stave churches.[3] It was constructed entirely out of wood at the beginning of the 13th century, and it was dedicated to the Virgin Mary.[5] After the Reformation, the church was in very poor condition. A major restoration of the building took place during 1849–1851. However, because the restorers lacked the necessary knowledge and skills, another restoration was required in the 1950s. The interior was marked by the period after the Reformation in 1536–1537 and is for a great part a result of the restoration that took place in the 1950s.</p>
+                        <button onclick="display('sectionnorway')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionviking">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/023/931/original/e53acef8983c5bc6f8afae001c97f337/sweden-stockholm-vasa-museum-041918-az.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Viking Ship Museum  is located on the Bygdoypeninsula in OsloThe museum is most famous for the completely whole Oseberg ship, excavated from the largest known ship burial in the world. Other main attractions at the Viking Ship Museum are the Gokstad ship and Tune ship. Additionally, the Viking Age display includes sledges, beds, a horse cart, wood carving, tent components, buckets and other grave goods.
+                            It is part of the Museum of Cultural History of the University of Oslo, and houses three Viking era burial ships that were found as part of archaeological finds from Tune, Gokstad (Sandefjord), Oseberg (Tønsberg) and the Borre mound cemetery.
+                            
+                            
+                            There has been much debate about this suggestion, both in the museum and archaeological community as well as in the media. Opponents to the move have raised concerns that the ships are too fragile and that they will not survive the move undamaged, while proponents claim otherwise, suggesting a move could go ahead without inflicting serious damage to the finds.</p>
+                        <button onclick="display('sectionnorway')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionnidaros">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://global.hurtigruten.com/globalassets/photos/excursions/norwegian-coast-20181920/3b-trondheim-w-nidaros-cathedral/3b_trondheim_w_nidaros_cathedral_40_nidarosdom_trondheim.jpg?width=1900&height=950&transform=DownFill" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Today, the cathedral is a popular tourist attraction. Nidaros Cathedral is the site of the observation of Olav's Wake (Norwegian: Olavsvaka). This religious and cultural festival is centered upon the anniversary of the death of Saint Olav at the Battle of Stiklestad. Tourists often follow the historic Pilgrim's Route (Norwegian: Pilegrimsleden) to visit the cathedral for this and other events.
+
+                            Nidaros Cathedral is a Church of Norway cathedral located in the city of Trondheim in Trøndelag county. It is built over the burial site of King Olav II (c. 995–1030, reigned 1015–1028), who became the patron saint of the nation, and is the traditional location for the consecration of new kings of Norway. It was built over a 230-year period, from 1070 to 1300 when it was substantially completed. However additional work, additions and renovations have continued intermittently since then, including a major reconstruction starting in 1869 and completed in 2001.</p>
+                        <button onclick="display('sectionnorway')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionilulissat">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/65/b3/48/hotel-icefiord.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">It is one of the best tourist spot in greenland. Ilulissat Icefjord  is a fjord in western Greenland. Located 250 km north of the Arctic Circle, the Ilulissat Icefjord runs west 40 km (25 mi) from the Greenland ice sheet to Disko Bay just south of Ilulissat town. Ilulissat Icefjord was declared a UNESCO World Heritage Site in 2004 because of its natural beauty and the importance of the fast-moving  Jakobshavn Glacier in developing the current scientific understanding of anthropogenic climate change.
+
+                            The fjord contains the Jakobshavn Glacier (Greenlandic: Sermeq Kujalleq), the most productive glacier in the Northern Hemisphere. The glacier flows at a rate of 20–35 m (66–115 ft) per day, resulting in around 20 billion tonnes of icebergs calved off and passing out of the fjord every year.</p>
+                        <button onclick="display('sectiongreenland')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiongreenlandnational">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://i.pinimg.com/originals/25/66/3a/25663a1df484e68897f66f480f761688.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Greenland National Museum (Greenlandic: Nunatta Katersugaasivia Allagaateqarfialu) is located in Nuuk, the capital of Greenland. It was one of the first museums established in Greenland, inaugurated in the mid-1960s.[1] The museum has many artefacts related to archaeology, history, art, and handicrafts and also has information about ruins, graveyards, buildings etc.[2] It is based in a warehouse which was built in 1936.
+
+                            The museum also houses a display on social change in the 1950s and one on geology. Several other nearby buildings also fall under the museum's protection, such as the restocked cooper's workshop and a display on blubber vats and presses.
+                            
+                            A major display in the museum is the Qilakitsoq mummies. The museum holds the mummies of three women and a six-month-old child dating to the mid-15th-century.</p>
+                        <button onclick="display('sectiongreenland')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionthe">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://res.cloudinary.com/simpleview/image/upload/v1473233793/clients/norway/Northern_lights_Reine_Lofoten_2000x1000_de355490-2807-4dc7-ac0c-bc254d514095.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">It is one of the best place in greenland.The northern lights, or aurora borealis, are a spectacular, colourful display of light commonly seen in the night sky in the northern hemisphere. Auroras in the southern hemisphere are known as the southern lights, or aurora australis.
+
+                            Auroras are the result of disturbances in the magnetosphere caused by the solar wind. Major disturbances result from enhancements in the speed of the solar wind from coronal holes and coronal mass ejections. These disturbances alter the trajectories of charged particles in the magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere). The resulting ionization and excitation of atmospheric constituents emit light of varying colour and complexity. The form of the aurora, occurring within bands around both polar regions, is also dependent on the amount of acceleration imparted to the precipitating particles.
+                            
+                            Most of the planets in the Solar System, some natural satellites, brown dwarfs, and even comets also host auroras.</p>
+                        <button onclick="display('sectiongreenland')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionknud">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.thepaintboxgarden.com/wp-content/uploads/2020/10/22-Museum-exhibit-Qeqertarsuaq-Greenland-1-1200x800.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">For adventurers who are history buffs, the Knud Rasmussen Museum is the place for you to see. Located just north of the Ilulissat Icefjord, this museum is a living tribute to the Danish explorer Knud Rasmussen, who led expeditions in search of the fabled Northwest Passage.
+
+                            Knud Rasmussen's Museum is a museum dedicated to the famous Danish explorer Knud Rasmussen. It is located in the town of Ilulissat, Greenland.The house was built in 1917 and designed by Helge Bojsen-Møller. Since 1939, the house has served as a museum dedicated to Rasmussen. In 2011, the house experienced a fire, yet the house and furniture were saved.
+                            
+                            The museum is centered on three permanent exhibitions: The town and village the history of Knud Rasmussen and Arctic expeditions, Sermermiut - the big settlement by the Icefjord.The house, which houses the museum, is from 1848 and was originally the North Greenland's first seminary. It is the one of the  visited place in Greenland.</p>
+                        <button onclick="display('sectiongreenland')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionqaqortoq">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://visitgreenland.com/wp-content/uploads/qaqortoq-museum/qaqortoq-museum-06.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Qaqortoq Museum (Greenlandic: Kalaallit Nunaanni Katersugaasiviit) is a museum in Qaqortoq, Greenland. It is located close to the main fountain square in one of the oldest buildings of the town, the former Royal Greenland Trading Department which dates from 1804. The museum exhibits old Inuit boats, hunting equipment, national dresses and Norse artifacts.One of the features is the reconstructed "red room" and "blue room", where polar explorer Knud Rasmussen and the aviator Charles Lindberg have slept. Much of the Inuit culture can be seen around this area along with the old brewery and the old meeting hall.
+
+                            This is Greenland's 4th biggest town with 3,000 inhabitants and it is a very beautiful town in Southern Greenland.
+                            The museum contains the reconstructed ‘Blue room’ and ‘Red room’, where Knud Rasmussen and Charles Lindbergh respectively stayed overnight.In 2006 the museum started constructing an umiac, a traditional Greenlandic boat.[3] The project was done in cooperation with Northern Coastal Experience.</p>
+                        <button onclick="display('sectiongreenland')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        <div class="d-flex flex-row justify-content-center" style="margin-top: 10px;">
+                            <button onclick="display('sectionhospitality')">Hospitality</button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionhospitality">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head" style="margin-bottom: 100px;">Hospitality Services</h1>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4615/4615689.png" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiontour')"><h1 class="para">Tour Guides</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://64.media.tumblr.com/995aac6240336c4245956e5ae86705f8/tumblr_inline_pb0n8peFPH1r02mf8_1280.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionhotel')"><h1 class="para">Hotels</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://marketing-image-production.s3.amazonaws.com/uploads/db274193e9585589c8582f8fad5b80e8a471a5d667b5a1edef76dfeb5ea0f3a50360c02b722c3aa365518a404b071912138883b03c74acfb6a7d00ae48c36da4.jpg" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionlocal')"><h1 class="para">Local Transport</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionHome')">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiontour">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head" style="margin-bottom: 100px;">Tour Guides</h1>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://www.tripelle.com/wp-content/uploads/2018/08/guide.jpg" class="card1_img" alt="">
+                            <div class="para_card1">
+                                <p class="para1">Name: Ram <br>Rating:<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star chechked"></span>
+                                <span class="fa fa-star"></span>
+                                <br> contact:551118622</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://news.gatech.edu/sites/default/files/hg_media/tourguides_rapsas.jpg" class="card1_img" alt="">
+                            <div class="para_card1">
+                                <p class="para1">Name: Ram <br>Rating:<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <br> contact:551118622</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://media.istockphoto.com/id/514403853/photo/tour-guide-talking-to-potential-students-while-visiting-campus.jpg?s=612x612&w=0&k=20&c=1xIVdYKFAfQ_-xL-2jWvglaXERxlmLkpKLYBTYzOpdY=" class="card1_img" alt="">
+                            <div class="para_card1">
+                                <p class="para1">Name: Ram <br>Rating:<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <br> contact:551118622</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionhospitality')">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionlocal">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head" style="margin-bottom: 100px;">Tour Guides</h1>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://taxiguru.in/wp-content/themes/taxiv2/img/taxi-img.png" class="card1_img" alt="">
+                            <div class="para_card">
+                                <p class="para">Car <br> Price: 20Rs per km</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://tractorsinfo.com/wp-content/uploads/2017/02/Force-Traveller-26-image-3.jpg" class="card1_img" alt="">
+                            <div class="para_card">
+                                <p class="para">Bus <br> Price: 40Rs per km</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://im.indiatimes.in/content/2019/Feb/electric_three_wheelers_india_electric_autos_india_electric_autorickshaws_india_electric_vehicle_1550739655_725x725.jpg" class="card1_img" alt="">
+                            <div class="para_card">
+                                <p class="para">Auto <br> Price: 10Rs per km</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionhospitality')">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sectionhotel">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <h1 class="head" style="margin-bottom: 100px;">Hotels</h1>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1523258381/Hotel/Vijayawada/00016015/hotel-raj-towers-vijayawada-deluxe-room-42395436135fs_RH4fbh.jpg" class="card1_img" alt="">
+                            <div class="para_card1">
+                                <p class="para1">Name: Raj Towers <br>Rating:<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star chechked"></span>
+                                <span class="fa fa-star"></span>
+                                <br>Price: 1500/- per day
+                                <br> contact:551118622</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card1">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/b2/4f/exterior-view.jpg?w=700&h=-1&s=1" class="card1_img" alt="">
+                            <div class="para_card1">
+                                <p class="para1">Name: Novotel <br>Rating:<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <br>Price: 2000/- per day
+                                    <br> contact:551118622</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-12">
+                        <div class="card1">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/149878371.jpg?k=7b9ac4cbcf28e026bfa7a7771d2954ce4b675c3b8f1f61080d26757759f127e9&o=&hp=1" class="card1_img" alt="">
+                            <div class="para_card1">
+                                <p class="para1">Name: Gate Way <br>Rating:<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <br>Price: 2500/- per day
+                                <br> contact:551118622</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="col-12">
+                        <button onclick="display('sectionhospitality')">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionjs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="js_card">
+                        <h1 class="js_head">Enter The Details</h1>
+                        <div class="col-12 d-flex flex-row">
+                            <div class="col-6">
+                                <input type="text" id="sourse_input" class="sourse-input" placeholder="From" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" id="destination_input" class="sourse-input" placeholder="To" />
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-row">
+                            <div class="col-6">
+                                <input type="date" id="start_input" class="sourse-input" placeholder="Start Date" />
+                            </div>
+                            <div class="col-6">
+                                <input type="date" id="end_input" class="sourse-input" placeholder="End Date" />
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-row justify-content-center">
+                            <input type="text" id="mail_input" class="sourse-input" placeholder="Mail ID" />
+                        </div>
+                        <div class="col-12 d-flex flex-row" style="margin-left:153px ;">
+                            <!--<input type="text" id="mode_input" class="sourse-input" placeholder="Mode Of Transportation" />-->
+                            <form>  
+                                <label> Mode Of Transportation </label>  
+                                <select id="mode_input" class="sourse-input">  
+                                <option value = "Select"> Select
+                                </option>  
+                                <option value = "Flight"> Flight   
+                                </option>  
+                                <option value = "Car"> Car  
+                                </option>  
+                                <option value = "Train"> Train  
+                                </option>
+                                </option>  
+                                <option value = "Bus"> Bus 
+                                </option>  
+                                </select>  
+                                </form>  
+                                
+                        </div>
+                        <div class="col-12 d-flex flex-row justify-content-center">
+                            <button style="margin-right: 20px;" onclick="display('sectionHome')">Back</button>
+                            <button id="jsbtn">Conform</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionconformJs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p id="jspara"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script type="text/javascript" src="/js.js"></script>
+    <script>
+        let p=document.getElementById("jspara");
+        let sourse=document.getElementById("sourse_input");
+        let destination=document.getElementById("destination_input");
+        let start_date=document.getElementById("start_input");
+        let end_date=document.getElementById("end_input");
+        let mode=document.getElementById("mode_input");
+        let jsbtn=document.getElementById("jsbtn");
+        let mail=document.getElementById("mail_input");
+
+        jsbtn.onclick=function(){
+            let a=sourse.value;
+            let b=destination.value;
+            let c=start_date.value;
+            let d=end_date.value;
+            let e=mode.value;
+            let f=mail.value;
+            if(a==="" || b==="" || c==="" || d==="" || e==="Select" || f=="")
+            {
+                alert("Enter The Details Correctly");
+            }
+            else{
+                alert("Your Details were taken succesfully Sourse: "+a+" Detination: "+b+" Start Date: "+c+" End Date: "+d+"Mail ID: "+f+" Mode Of Transportation: "+e);
+            }
+            return;
+        }
+
+    </script>
+</body>
+
+</html>

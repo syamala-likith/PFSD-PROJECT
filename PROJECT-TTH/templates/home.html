@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+ .container {
+  position: relative;
+  margin: 0 auto; /* Center it */
+}
+.img1234{
+width:100vw;
+height:90vh;
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+.navbar {
+  width: 102.2%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.bttn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.9rem 2.5rem;
+  text-align: center;
+  background-color: #47AB11;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 17px;
+  margin-top:10px;
+  margin-right:15px;
+}
+  .logo{
+            height: 40px;
+            border-radius: 30px;
+            margin-right:65vw;
+
+        }
+
+
+
+</style>
+</head>
+<body>
+<div class="navbar fixed-top">
+  <a  href="#"><img class="logo" src="https://static.vecteezy.com/system/resources/thumbnails/005/183/355/small/travel-agency-logo-template-holiday-logo-template-beach-logo-concept-vector.jpg" alt=""> </a>
+  <a href="http://localhost:5000/aboutus" ><i class="fa fa-fw fa-search" ></i> About us </a>
+  <a href="http://localhost:5000/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="http://localhost:5000/login"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="http://localhost:5000/register"><i class="fa fa-fw fa-user"></i> Signup</a>
+
+</div>
+
+
+
+  <div class="container">
+  <img src="https://cdn.mos.cms.futurecdn.net/StdZbJsdxJJkdCr9Y4PvLN.jpg" class="img1234">
+  <div class="content">
+
+    <h1><i><marquee behaviour="slide" direction="right" >Travel Tourism and Hospitality.. </marquee></i></h1>
+  </div>
+</div>
+<br>
+<br>
+
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

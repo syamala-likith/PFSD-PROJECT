@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="js.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+
+        .head{
+            text-align: center;
+            font-family: Comic Sans MS;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .logo{
+            height: 40px;
+            border-radius: 30px;
+        }
+        #sectionhome{
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+        }
+        .card1{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .card1_img{
+            width: 20vw;
+            height: 30vh;
+            margin: 20px;
+            margin-right: 15px;
+        }
+        .para_card{
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            height: 10vh;
+            padding-top: 10px;
+        }
+        .para{
+            font-family: Brush Script MT;
+        }
+        .detailed_cardimg{
+            width: 50vw;
+            margin: 20px;
+        }
+        .lastcard{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .detailed_card{
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .detailed_para_card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 15px;
+            background-color: white;
+        }
+        .js_head{
+            text-align: center;
+            font-family: Comic Sans MS;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .js_card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            padding: 10px;
+        }
+        .sourse-input{
+            width: 25vw;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg"
+            class="navbar-image logo"
+            alt=""
+          />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" onclick="display('sectionHome')" href="#">
+              Home <span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-link" href="#">About Me</a>
+            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#">Testimonials</a>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row">
+            <div id="sectionHome">
+                <div class="col-12">
+                    <h1 class="head">Select Your Destination</h1>
+                </div>
+                <div class="d-flex flex-row"  style="margin-bottom: 15px;">
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.M_JDAtvLeHKRfW_ivd9-9QHaFj&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionladakh')"><h1 class="para">Ladakh</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.zdLU4BlhWkzVyzv5mAgwCgHaE6&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiontajmahal')"><h1 class="para">TajMahal</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.y4HGyR4keSA0QwmGr4XrtgHaEo&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectioneurope')"><h1 class="para">Europe</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse2.mm.bing.net/th?id=OIP.9qk9pE4HkAYPXtG21bVqBQHaFj&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionitaly')"><h1 class="para">Italy</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.6Jfz6lBnsVhpzlvFPVcXoAHaE8&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionsouthkorea')"><h1 class="para">South Korea</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.1KfK-4LiBz4LLGBsLsf2SQHaFS&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionkerala')"><h1 class="para">Kerala</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row" style="margin-bottom: 15px;">
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.9hlHIWaXQuqo4fjjgpaafwHaE6&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiondubai')"><h1 class="para">Dubai</h1></div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.pxE-vsPwmea3aLWIQPEGqwHaHa&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectiongreenland')"><h1 class="para">Greenland</h1></div>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card1">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.NWqDIuE8JxSwykNzgeQ8kgHaKx&pid=Api&P=0" class="card1_img" alt="">
+                            <div class="para_card" onclick="display('sectionnorway')"><h1 class="para">Norway</h1></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-12 d-flex flex-row lastcard">
+                <div class="col-md-4">
+                    <div class="content-box">
+                        <span class="content-box__headline">Important links</span>
+                                                        <ul class="nav-footer-links nav-footer-links--inline">
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/terms-and-conditions">
+                        Terms &amp; Conditions
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/privacy-policy">
+                        Privacy Policy
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                       href="#" onclick="CCM.openWidget();return false;">
+                        Cookies
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/legal-note">
+                        Legal Note
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/important-links/editorial">
+                        Editorial
+                    </a>
+                </li>
+
+                                                <li class="nav-footer-links__item">
+                    <a class="link"
+                                                   href="/en/contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+                                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-box">
+                        <span class="content-box__headline">Guest Service</span>
+                                                        <ul class="nav-footer-links">
+                    <li class="nav-footer-links__item">
+                <a href="tel:+49(0)89233-96500"
+                   aria-label="Phone number"
+                   title="Phone number"
+                   class="link"
+                   >
+                    +49 (0)89 233-96500</a>
+            </li>
+                    <li class="nav-footer-links__item">
+                <a href="mailto:tourismus.gs@muenchen.de"
+                   aria-label="Email"
+                   title="Email"
+                   class="link"
+                   >
+                    tourismus.gs@muenchen.de</a>
+            </li>
+            </ul>
+                                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content-box">
+                        <span class="content-box__headline">Newsletter</span>
+                        <p>News and information about the <a href="https://www.touristnews-muenchen.de/en/" target="_blank">touristic options</a> in Munich.</p>
+                                                                                                                        </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+    <div id="sectionladakh">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://cdn.kimkim.com/files/a/article_images/images/ffd32d987bf5631bdb5476930b6983843e1e75e7/big-053bc8717094656da0262e2b59ccb50b.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Ladakh (/ləˈdɑːk/)[11] is a region administered by India as a union territory,[1] which constitutes a part of the larger Kashmir region and has been the subject of dispute between India, Pakistan, and China since 1947.[2][3] Ladakh is bordered by the Tibet Autonomous Region to the east, the Indian state of Himachal Pradesh to the south, both the Indian-administered union territory of Jammu and Kashmir and the Pakistan-administered Gilgit-Baltistan to the west, and the southwest corner of Xinjiang across the Karakoram Pass in the far north. It extends from the Siachen Glacier in the Karakoram range to the north to the main Great Himalayas to the south.[12][13] The eastern end, consisting of the uninhabited Aksai Chin plains, is claimed by the Indian Government as part of Ladakh, and has been under Chinese control since 1962.[14][15]</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiontajmahal">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://cdn1.matadornetwork.com/blogs/1/2019/09/Taj-Mahal-1200x849.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ-/; lit. 'Crown of the Palace'),[4][5][6] is an Islamic ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1631 by the Mughal emperor Shah Jahan (r. 1628–1658) to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectioneurope">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://nomadsunveiled.com/wp-content/uploads/2020/12/europe-city-pass.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Ladakh (/ləˈdɑːk/)[11] is a region administered by India as a union territory,[1] which constitutes a part of the larger Kashmir region and has been the subject of dispute between India, Pakistan, and China since 1947.[2][3] Ladakh is bordered by the Tibet Autonomous Region to the east, the Indian state of Himachal Pradesh to the south, both the Indian-administered union territory of Jammu and Kashmir and the Pakistan-administered Gilgit-Baltistan to the west, and the southwest corner of Xinjiang across the Karakoram Pass in the far north. It extends from the Siachen Glacier in the Karakoram range to the north to the main Great Himalayas to the south.[12][13] The eastern end, consisting of the uninhabited Aksai Chin plains, is claimed by the Indian Government as part of Ladakh, and has been under Chinese control since 1962.[14][15]Europe is a landmass, which is either considered a continent in its own right or a subcontinent of Eurasia, located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. Comprising the westernmost peninsulas of Eurasia,[10] it shares the continental landmass of Afro-Eurasia with both Africa and Asia. It is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west, the Mediterranean Sea to the south and Asia to the east. Europe is commonly considered to be separated from Asia by the watershed of the Ural Mountains, the Ural River, the Caspian Sea, the Greater Caucasus, the Black Sea and the waterways of the Turkish Straits.[11] Although much of this border is over land, Europe is conventionally recognised as its own continent because of its great physical size and the weight of its history and traditions. Europe can also be viewed as a subcontinent of Eurasia, and referred to as the European subcontinent.[12][13][14][15]</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionitaly">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.nationalgeographicexpeditions.co.uk/wp-content/uploads/2018/11/venice-italy-shutterstock-279340874-e1579194677902.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Italy (Italian: Italia [iˈtaːlja] (listen)), officially the Italian Republic or the Republic of Italy[12][13] (Italian: Repubblica Italiana [reˈpubblika itaˈljaːna]),[14][15] is a country that consists of a peninsula delimited by the Alps and several islands surrounding it;[note 1] its territory largely coincides with the homonymous geographical region.[16] Italy is located in the middle of the Mediterranean Sea, in Southern Europe;[17][18][19] it is also considered part of Western Europe.[20][note 2] A unitary parliamentary republic with Rome as its capital and largest city, the country covers a total area of 301,230 km2 (116,310 sq mi) and shares land borders with France, Switzerland, Austria, Slovenia and the enclaved microstates of Vatican City and San Marino. Italy has a territorial exclave in Switzerland, Campione. With over 60 million inhabitants,[21] Italy is the third-most populous member state of the European Union.
+
+                        </p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionsouthkorea">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://media.cntraveler.com/photos/5a70f9df8af0dc48d25dafa1/16:9/pass/Donggung-Palace-and-Wolji-Pond-GettyImages-591106790.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">South Korea,[b] officially the Republic of Korea (ROK),[c] is a country in East Asia, constituting the southern part of the Korean Peninsula and sharing a land border with North Korea. Its western border is formed by the Yellow Sea, while its eastern border is defined by the Sea of Japan. South Korea claims to be the sole legitimate government of the entire peninsula and adjacent islands. It has a population of 51.75 million, of which roughly half live in the Seoul Capital Area, the fifth largest metropolis in the world. Other major cities include Incheon, Busan, and Daegu.]</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionkerala">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.wanderglobe.org/wp-content/uploads/2018/07/Kerala.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Kerala (English: /ˈkɛrələ/ KERR-ə-lə; Malayalam: [ke:ɾɐɭɐm] (listen)) is a state on the Malabar Coast of India.[13] It was formed on 1 November 1956, following the passage of the States Reorganisation Act, by combining Malayalam-speaking regions of the erstwhile regions of Cochin, Malabar, South Canara, and Travancore.[14][15] Spread over 38,863 km2 (15,005 sq mi), Kerala is the 21st largest Indian state by area. It is bordered by Karnataka to the north and northeast, Tamil Nadu to the east and south, and the Lakshadweep Sea[16] to the west. With 33 million inhabitants as per the 2011 census, Kerala is the 13th-largest Indian state by population. It is divided into 14 districts with the capital being Thiruvananthapuram. Malayalam is the most widely spoken language and is also the official language of the state.[17]]</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiondubai">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.momentaryawe.com/wp-content/uploads/2014/11/beautiful_dubai_12.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Dubai (/duːˈbaɪ/, doo-BY; Arabic: دبي, romanized: Dubayy, IPA: [dʊˈbajj], Gulf Arabic pronunciation: [dəˈbaj]) is the most populated city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai, the most populated of the 7 monarchies which together form the United Arab Emirates. [7][8][9] Established in the 18th century as a small fishing village, the city grew rapidly in the early 21st century with a focus on tourism and luxury,[10] having the second most five-star hotels in the world,[11] and the tallest building in the world, the Burj Khalifa, which is over a half a mile tall.[12]</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectiongreenland">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://i.pinimg.com/originals/48/7f/b7/487fb7fc9d8306364359b4e7e10ca361.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Greenland (Greenlandic: Kalaallit Nunaat, pronounced [kalaːɬit nʉnaːt]; Danish: Grønland, pronounced [ˈkʁɶnˌlænˀ]) is an island country that is part of the Kingdom of Denmark.[13] It is located between the Arctic and Atlantic oceans, east of the Canadian Arctic Archipelago. Greenland is the world's largest island.[d] It is one of three constituent countries that form the Kingdom of Denmark, along with Denmark and the Faroe Islands; the citizens of these countries are all citizens of Denmark and the European Union.[15] Greenland is divided into five municipalities: Sermersooq, Kujalleq, Qeqqata, Qeqertalik and Avannaata. The northeast of the island composes the unincorporated Northeast Greenland National Park. Thule Air Base is also unincorporated, an enclave within Avannaata municipality administered by the United States Space Force.[16] Greenland's capital is Nuuk.[15]</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionnorway">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="detailed_card">
+                        <img src="https://www.dailyscandinavian.com/wp-content/uploads/2017/02/030217-norway.jpg" class="detailed_cardimg" alt="">
+                        <div class="detailed_para_card">
+                        <p class="detailed_card_para">Norway, officially the Kingdom of Norway,[a] is a Nordic country in Northern Europe, the mainland territory of which comprises the western and northernmost portion of the Scandinavian Peninsula. The remote Arctic island of Jan Mayen and the archipelago of Svalbard also form part of Norway.[note 5] Bouvet Island, located in the Subantarctic, is a dependency of Norway; it also lays claims to the Antarctic territories of Peter I Island and Queen Maud Land. The capital and largest city in Norway is Oslo.</p>
+                        <button onclick="display('sectionHome')">Back</button>
+                        <button onclick="display('sectionjs')">Book</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionjs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="js_card">
+                        <h1 class="js_head">Enter The Details</h1>
+                        <div class="col-12 d-flex flex-row">
+                            <div class="col-6">
+                                <input type="text" id="sourse_input" class="sourse-input" placeholder="From" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" id="destination_input" class="sourse-input" placeholder="To" />
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-row">
+                            <div class="col-6">
+                                <input type="date" id="start_input" class="sourse-input" placeholder="Start Date" />
+                            </div>
+                            <div class="col-6">
+                                <input type="date" id="end_input" class="sourse-input" placeholder="End Date" />
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-row justify-content-center">
+                            <input type="text" id="mode_input" class="sourse-input" placeholder="Mode Of Transportation" />
+                        </div>
+                        <div class="col-12 d-flex flex-row justify-content-center">
+                            <button style="margin-right: 20px;" onclick="display('sectionHome')">Back</button>
+                            <button id="jsbtn">Conform</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionconformJs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p id="jspara"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script type="text/javascript" src="/js.js"></script>
+    <script>
+        let p=document.getElementById("jspara");
+        let sourse=document.getElementById("sourse_input");
+        let destination=document.getElementById("destination_input");
+        let start_date=document.getElementById("start_input");
+        let end_date=document.getElementById("end_input");
+        let mode=document.getElementById("mode_input");
+        let jsbtn=document.getElementById("jsbtn");
+
+        jsbtn.onclick=function(){
+            let a=sourse.value;
+            let b=destination.value;
+            let c=start_date.value;
+            let d=end_date.value;
+            let e=mode.value;
+            if(a==="" || b==="" || c==="" || d==="" || e==="")
+            {
+                alert("Enter The Details Correctly");
+            }
+            else{
+                alert("Your Details were taken succesfully Sourse: "+a+" Detination: "+b+" Start Date: "+c+" End Date: "+d+" Mode Of Transportation: "+e);
+            }
+            return;
+        }
+
+    </script>
+</body>
+
+</html>
